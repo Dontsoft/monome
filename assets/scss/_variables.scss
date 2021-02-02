@@ -3,6 +3,8 @@ $background            : #F9FCFF;
 $background-foreground : #FFFFFF;
 $primary               : #5863F8;
 $error                 : #9B2915;
+$success               : #5FAD56;
+$warning               : #F78154;
 $text                  : #282828;
 $text-light            : lighten(#282828, 60);
 $text-inverse          : $background;
@@ -41,14 +43,31 @@ $xl-content-size  : $xl-display-size - 2 * $padding-m;
 $xxl-display-size : 1680px !default;
 $xxl-content-size : $xxl-display-size - 2 * $padding-m;
 
-$display-sizes: $xs-display-size, $s-display-size, $m-display-size, $l-display-size, $xl-display-size, $xxl-display-size;
+$display-sizes: $xs-display-size,
+$s-display-size,
+$m-display-size,
+$l-display-size,
+$xl-display-size,
+$xxl-display-size;
+
+$button-colors: (primary: ("background-color": $primary,
+        "color": $text-inverse,
+    ),
+    error: ("background-color": $error,
+        "color": $text-inverse,
+    ),
+    success: ("background-color": $success,
+        "color": $text-inverse,
+    ),
+    warning: ("background-color": $warning,
+        "color": $text-inverse,
+    ));
 
 $default-cubic-bezier: cubic-bezier(.16, -.45, .56, .96);
 
 @mixin default-transition() {
-    transition: all .1s $default-cubic-bezier, width none, height none;
+    transition: all .1s $default-cubic-bezier;
 }
-
 
 @mixin default-border-shadow() {
     box-shadow: 0 0 2px 0 rgba($text-light, 0.1);

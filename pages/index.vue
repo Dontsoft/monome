@@ -4,7 +4,31 @@
       Hello
     </span>
     <span class="button button--primary">
-      Hello 2
+      Primary
+    </span>
+    <span class="button button--error">
+      Error
+    </span>
+    <span class="button button--success">
+      Success
+    </span>
+    <span class="button button--warning">
+      Warning
+    </span>
+    <span class="button button--disabled">
+      Hello
+    </span>
+    <span class="button button--primary button--disabled">
+      Primary
+    </span>
+    <span class="button button--error button--disabled">
+      Error
+    </span>
+    <span class="button button--success button--disabled">
+      Success
+    </span>
+    <span class="button button--warning button--disabled">
+      Warning
     </span>
   </div>
 </template>
@@ -24,7 +48,7 @@ export default Vue.extend({})
   justify-content: center;
   align-items: center;
 
-  .button--primary {
+  .button:not(:first-of-type) {
     margin-top: $padding-xl;
   }
 }
