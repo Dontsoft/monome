@@ -60,6 +60,7 @@ import NewProjectPopup from './NewProjectPopup.vue';
 export default Vue.extend({
   methods: {
     newProject() : any {
+      Vue.prototype = this;
       const PopupConstructor = Vue.extend(NewProjectPopup);
       const instance = new PopupConstructor();
       const _mountElement = document.createElement("div");

@@ -1,5 +1,7 @@
 export default {
     dashboard: 'Dashboard',
     newProject: 'New Project',
-    newPlan: 'New Testplan'
+    newPlan: 'New Testplan',
+    cancel: 'Cancel',
+    save: 'Save'
 }

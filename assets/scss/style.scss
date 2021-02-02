@@ -74,6 +74,12 @@ html {
     border          : 1px solid $border-color;
     border-radius   : $border-radius;
 
+    -moz-user-select   : none;
+    -webkit-user-select: none;
+    -ms-user-select    : none;
+    user-select        : none;
+    -o-user-select     : none;
+
     &:hover {
         border-color: $border-color--hover;
         color       : darken($primary, 5);
@@ -86,7 +92,7 @@ html {
         cursor  : not-allowed;
 
         &:hover {
-            border-color: $border-color;
+            border-color    : $border-color;
             background-color: $background-foreground;
             color           : $primary;
         }
@@ -119,14 +125,14 @@ html {
 
             &:hover {
                 background-color: darken($--background-color, 5);
-                color              : $--text-color;
+                color           : $--text-color;
                 border-color    : darken($--background-color, 5);
                 box-shadow      : none;
             }
 
             &.button--disabled:hover {
                 background-color: $--background-color;
-                color              : $--text-color;
+                color           : $--text-color;
                 border-color    : $--background-color;
             }
         }
@@ -149,8 +155,17 @@ html {
         justify-content: center;
         align-items    : center;
     }
-}
 
+    &.flex--button-row {
+        flex-direction : row;
+        justify-content: flex-end;
+        align-items    : center;
+
+        .button:not(:last-child) {
+            margin-right: $padding-s;
+        }
+    }
+}
 
 .flex__spacer {
     flex-grow: 1;
