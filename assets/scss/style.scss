@@ -1,0 +1,159 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    color     : $text;
+    @include default-transition;
+    font-size: 13px;
+}
+
+html {
+    -ms-text-size-adjust   : 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing : antialiased;
+    font-family            : 'Mulish', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background-color       : $background;
+}
+
+.bg--dark {
+    background-color: $background-dark;
+
+    &.bg--recursive {
+        &>* {
+            background-color: $background-dark;
+        }
+    }
+}
+
+.bg--foreground {
+    background-color: $background-foreground;
+
+    &.bg--recursive {
+        &>* {
+            background-color: $background-foreground;
+        }
+    }
+}
+
+.color--light {
+    color: $text-light;
+
+    &.color--recursive {
+        &>* {
+            color: $text-light;
+        }
+    }
+}
+
+.color--inverse {
+    color: $text-inverse;
+
+    &.color--recursive {
+        &>* {
+            color: $text-inverse;
+        }
+    }
+}
+
+.color--primary {
+    color: $primary;
+
+    &.color--recursive {
+        &>* {
+            color: $primary;
+        }
+    }
+}
+
+.button {
+    display         : inline-block;
+    padding         : $padding-s $padding-l;
+    background-color: $background-foreground;
+    color           : $primary;
+    font-weight     : 600;
+    border          : 1px solid $border-color;
+    border-radius   : $border-radius;
+
+    &:hover {
+        border-color: $border-color--hover;
+        color       : darken($primary, 5);
+        cursor      : pointer;
+        @include default-border-shadow();
+    }
+
+    &.button--primary {
+        background-color: $primary;
+        color           : $text-inverse;
+        border-color    : $primary;
+
+        &:hover {
+            background-color: darken($primary, 5);
+            border-color    : darken($primary, 5);
+            box-shadow      : none;
+        }
+    }
+}
+
+.flex {
+    display: flex;
+
+    &.flex--row {
+        flex-direction: row;
+    }
+
+    &.flex--column {
+        flex-direction: column;
+    }
+
+    &.flex--center {
+        justify-content: center;
+        align-items    : center;
+    }
+}
+
+
+.flex__spacer {
+    flex-grow: 1;
+}
+
+.section {
+    padding: $padding-l 0;
+
+    .section__content {
+        margin: 0 auto;
+
+        @media screen and (min-width: $xs-display-size) {
+            width: $xs-content-size;
+        }
+
+        @media screen and (min-width: $s-display-size) {
+            width: $s-content-size;
+        }
+
+        @media screen and (min-width: $m-display-size) {
+            width: $m-content-size;
+        }
+
+        @media screen and (min-width: $l-display-size) {
+            width: $l-content-size;
+        }
+
+        @media screen and (min-width: $xl-display-size) {
+            width: $xl-content-size;
+        }
+
+        @media screen and (min-width: $xxl-display-size) {
+            width: $xxl-content-size;
+        }
+    }
+}
+
+.card {
+    background-color: $background-foreground;
+    border-radius   : $border-radius;
+    @include default-border-shadow();
+
+    &.card--padded {
+        padding: $padding-m;
+    }
+}

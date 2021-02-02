@@ -1,0 +1,55 @@
+$background-dark       : #201E50;
+$background            : #F9FCFF;
+$background-foreground : #FFFFFF;
+$primary               : #5863F8;
+$error                 : #9B2915;
+$text                  : #282828;
+$text-light            : lighten(#282828, 60);
+$text-inverse          : $background;
+$border-color          : lighten($text, 70);
+$border-color--hover   : lighten($text, 60);
+
+$border-radius: 4px;
+
+$padding-none: 0px;
+$padding-s   : 8px;
+$padding-m   : 16px;
+$padding-l   : 24px;
+$padding-xl  : 48px;
+
+$height-xs   : 8px;
+$height-s    : 12px;
+$height-m    : 16px;
+$height-l    : 20px;
+$height-xl   : 24px;
+$height-xxl  : 48px;
+$height-xxxl : 62px;
+$height-xxxxl: 78px;
+
+$navigation-bar-width: 300px;
+
+$xs-display-size  : 320px !default;
+$xs-content-size  : $xs-display-size - 2 * $padding-m;
+$s-display-size   : 576px !default;
+$s-content-size   : $s-display-size - 2 * $padding-m;
+$m-display-size   : 768px !default;
+$m-content-size   : $m-display-size - 2 * $padding-m;
+$l-display-size   : 992px !default;
+$l-content-size   : $l-display-size - 2 * $padding-m;
+$xl-display-size  : 1200px !default;
+$xl-content-size  : $xl-display-size - 2 * $padding-m;
+$xxl-display-size : 1680px !default;
+$xxl-content-size : $xxl-display-size - 2 * $padding-m;
+
+$display-sizes: $xs-display-size, $s-display-size, $m-display-size, $l-display-size, $xl-display-size, $xxl-display-size;
+
+$default-cubic-bezier: cubic-bezier(.16, -.45, .56, .96);
+
+@mixin default-transition() {
+    transition: all .1s $default-cubic-bezier, width none, height none;
+}
+
+
+@mixin default-border-shadow() {
+    box-shadow: 0 0 2px 0 rgba($text-light, 0.1);
+}
