@@ -30,6 +30,14 @@
     <span class="button button--warning button--disabled">
       Warning
     </span>
+    <div class="input">
+      <label for="" class="input__label">Test</label>
+      <input type="text" name="" id="" class="input__text">
+    </div>
+    <div class="input">
+      <label for="" class="input__label">Test</label>
+      <textarea class="input__text"></textarea>
+    </div>
   </div>
 </template>
 

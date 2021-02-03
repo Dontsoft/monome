@@ -1,6 +1,6 @@
 <template>
   <div class="popup__container flex flex--column">
-      <div class="popup__background" @click="close"></div>
+    <div class="popup__background" @click="close"></div>
     <div class="popup__positioner">
       <div class="popup__content card card--padded">
         <div class="popup__header">
@@ -40,12 +40,19 @@ export default Vue.extend({
     close(): any {
       this.$emit("close");
     },
+    keyup(event : KeyboardEvent) : any {
+      if (event.key == "Escape") {
+        this.$emit('close');
+      }
+    }
   },
   created() {
     document.body.classList.add("popup__visible");
+    document.addEventListener('keyup', this.keyup);
   },
   destroyed() {
     document.body.classList.remove("popup__visible");
+    document.removeEventListener('keyup', this.keyup);
   },
 });
 </script>

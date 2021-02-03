@@ -6,7 +6,7 @@ $error                 : #D00000;
 $success               : #5FAD56;
 $warning               : #FF8811;
 $text                  : #282828;
-$text-light            : lighten(#282828, 60);
+$text-light            : lighten(#282828, 30);
 $text-inverse          : $background;
 $border-color          : lighten($text, 70);
 $border-color--hover   : lighten($text, 60);
@@ -66,7 +66,7 @@ $button-colors: (primary: ("background-color": $primary,
 $default-cubic-bezier: cubic-bezier(.16, -.45, .56, .96);
 
 @mixin default-transition() {
-    transition: all .1s $default-cubic-bezier;
+    transition: all .1s $default-cubic-bezier, width 0, height 0, top 0, left 0, bottom 0, right 0;
 }
 
 @mixin default-border-shadow() {

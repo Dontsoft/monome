@@ -15,6 +15,13 @@ html {
     background-color       : $background;
 }
 
+
+::selection {
+    background: $primary;
+    color     : $text-inverse;
+}
+
+
 .bg--dark {
     background-color: $background-dark;
 
@@ -210,5 +217,45 @@ html {
 
     &.card--padded {
         padding: $padding-m;
+    }
+}
+
+.input {
+    display       : flex;
+    flex-direction: column;
+
+    .input__label {
+        font-size    : 0.9rem;
+        color        : $text-light;
+        margin-bottom: $padding-s;
+    }
+
+    .input__text {
+        outline         : none;
+        display         : inline-block;
+        padding         : $padding-s;
+        background-color: transparent;
+        color           : $text;
+        border          : 1px solid $border-color;
+        border-radius   : $border-radius;
+        width           : 100%;
+
+        &::placeholder {
+            color: $text-light;
+        }
+
+        &:hover,
+        &:focus {
+            border-color: $border-color--hover;
+        }
+        &.input__text--non-resizable {
+            resize: none;
+        }
+    }
+}
+
+.form-container {
+    & > *:not(:first-child) {
+        margin-top: $padding-m;
     }
 }
