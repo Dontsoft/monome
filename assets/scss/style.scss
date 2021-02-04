@@ -176,17 +176,14 @@ html {
 
 .flex__spacer {
     flex-grow: 1;
-}
+} 
 
 .section {
     padding: $padding-l 0;
 
     .section__content {
         margin: 0 auto;
-
-        @media screen and (min-width: $xs-display-size) {
-            width: $xs-content-size;
-        }
+        width: $xs-content-size;
 
         @media screen and (min-width: $s-display-size) {
             width: $s-content-size;

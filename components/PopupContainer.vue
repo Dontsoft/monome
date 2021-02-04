@@ -70,6 +70,7 @@ body.popup__visible {
   width: 100vw;
   z-index: 10000;
   overflow-y: auto;
+  max-height: 100vh;
 
   justify-content: flex-start;
   align-items: center;
@@ -86,13 +87,16 @@ body.popup__visible {
   }
 
   .popup__positioner {
-    padding: $padding-xl;
+    padding: $padding-m;
+    @media screen and (min-width: $l-display-size) {
+      padding: $padding-xl;
+    }
   }
 
   .popup__content {
     @each $size in $display-sizes {
       @media screen and (min-width: $size) {
-        max-width: $size - 2 * $padding-xl;
+        //max-width: $size - 2 * $padding-xl;
       }
     }
   }
