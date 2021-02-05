@@ -3,5 +3,7 @@ export default {
     newProject: 'Neues Projekt',
     newPlan: 'Neuer Testplan',
     cancel: 'Abbrechen',
-    save: 'Speichern'
+    save: 'Speichern',
+    name: 'Name',
+    description: 'Beschreibung'
 }

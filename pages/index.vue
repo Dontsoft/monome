@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="content__container container">
     <span class="button">
       Hello
     </span>
@@ -49,8 +49,6 @@ export default Vue.extend({})
 
 <style lang="scss">
 .container {
-  height: 100vh;
-  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;

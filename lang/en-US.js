@@ -3,5 +3,7 @@ export default {
     newProject: 'New Project',
     newPlan: 'New Testplan',
     cancel: 'Cancel',
-    save: 'Save'
+    save: 'Save',
+    name: 'Name',
+    description: 'Description'
 }

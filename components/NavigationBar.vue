@@ -18,6 +18,7 @@
             :to="localePath({ name: 'index' })"
             >{{ $t("dashboard") }}</NuxtLink
           >
+          <hr class="navigation-bar__hr">
           <span
             class="navigation-bar__item navigation-bar__item--with-icon navigation-bar__item--button"
             @click="newProject"
@@ -219,6 +220,12 @@ body.menu-visible {
     height: $content-size;
     width: $content-size;
   }
+}
+
+.navigation-bar__hr {
+  margin: $padding-s $padding-m $padding-s 0;
+  height: 1px;
+  background-color: rgba($text-inverse, 0.5);
 }
 
 .navigation-bar__item {

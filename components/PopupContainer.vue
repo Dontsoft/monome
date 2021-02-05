@@ -7,7 +7,7 @@
           <div class="popup__header__text">
             {{ header }}
           </div>
-          <div class="popup__close-button" @click="close">
+          <div class="popup__close-button" v-if="closable" @click="close">
             <svg viewBox="0 0 512 512">
               <path
                 fill="none"
@@ -35,14 +35,22 @@ export default Vue.extend({
       type: String,
       required: true,
     },
+    closable: {
+      type: Boolean,
+      required: false,
+      default: true
+    }
   },
   methods: {
     close(): any {
+      if (!this.closable) {
+        return;
+      }
       this.$emit("close");
     },
     keyup(event : KeyboardEvent) : any {
       if (event.key == "Escape") {
-        this.$emit('close');
+        this.close();
       }
     }
   },

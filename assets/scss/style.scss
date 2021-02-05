@@ -207,6 +207,14 @@ html {
     }
 }
 
+.content__container {
+  width: 100%;
+  padding: $padding-s;
+  @media screen and (min-width: $l-display-size) {
+      padding: $padding-l;
+  }
+}
+
 .card {
     background-color: $background-foreground;
     border-radius   : $border-radius;
